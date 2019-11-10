@@ -1,0 +1,38 @@
+\begin{tikzpicture}[line cap=round, line join=round, >=Triangle, scale=0.8, every node/.style={transform shape}]
+  \clip(-2.19,-2.79) rectangle (2.66,2.78);
+  \shade[shading=color wheel] [even odd rule] (0,0) circle (2cm);
+  %\draw(0,0) circle (2cm);
+  \draw [rotate around={0.:(0.,0.)},dash pattern=on 3pt off 3pt] (0,0)
+  ellipse (2cm and 0.9cm);
+
+  % Coordinate system
+  \draw [thick] (0,0) -- (0,2) node [above] {$z$};
+  \draw [dotted] (0,0) -- (0,-2); % -z
+  \draw [thick] (0,0) -- (-0.81,-0.79) node [below left] {$x$};
+  \draw [dotted] (0,0) -- (0.81,0.79);% -x
+  \draw [thick] (0,0) -- (2,0) node [right] {$y$};
+  \draw [dotted] (-2,0) -- (0,0); % -y
+  \draw (0,-2.2) node [below] {$\mathbf{\ket{1}}$};
+  \draw (0,2.2) node [above] {$\mathbf{\ket{0}}$};
+  % States
+  % psi_1
+  \draw [ultra thick, arrows={-Diamond[fill=green]}] (0,0)--
+  (0.70,1.07) node [right, shape=rectangle, fill=black!10!white]
+  {$\ket{\psi_1}$};%
+  % psi_2
+  \draw [ultra thick, arrows={-Diamond[fill=blue]}] (0,0)--
+  (-0.80,1.8) node [left, shape=rectangle, fill=black!10!white]
+  {$\ket{\psi_2}$};%
+  % psi_3
+  \draw [ultra thick, arrows={-Diamond[fill=red!80!white]}] (0,0)--
+  (1.50,-0.45) node [right, shape=rectangle, fill=black!10!white]
+  {$\ket{\psi_3}$};%
+  % psi_j
+  \draw [ultra thick, arrows={-Diamond[fill=orange]}] (0,0)--
+  (-0.40,-1.5) node [below, shape=rectangle, fill=black!10!white]
+  {$\ket{\psi_{\infty}}$};%
+
+  %-?-%\scriptsize
+  %-?-%\draw [fill] (0,0) circle (1.5pt);
+  %-?-%\draw [fill] (0.7,1.1) circle (0.5pt);
+\end{tikzpicture}

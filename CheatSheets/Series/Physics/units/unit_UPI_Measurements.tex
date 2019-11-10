@@ -1,0 +1,135 @@
+%\usepackage{booktabs}
+%\usepackage{xcolor}
+%\usepackage{colortbl}
+%\usepackage{siunitx}
+
+\section{Measurements}
+
+\sisetup{per-mode=reciprocal}
+
+
+\begin{table}[H]
+  \centering
+  \caption{There are seven fundamental SI units.}
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{1}{c}{\bfseries symbol}
+    &\multicolumn{1}{c}{\bfseries name}
+    &\multicolumn{1}{c}{\bfseries measures}%
+    \\%
+    \midrule%
+    % 
+    \si{\meter} & meter & length \\%
+    \si{\kilo\gram} & kilogram & mass \\%
+    \si{\second} & second & time \\%
+    \si{\kelvin} & kelvin & temperature \\%
+    \si{\mole} & mole & amount of substance \\%
+    \si{\ampere} & ampere & electric current \\%
+    \si{\candela} & candela & luminous intensity \\%
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+
+% \begin{minipage}{1.0\linewidth}
+\begin{table}[H]
+  \centering
+  \caption{Introductory mechanics and waves utilize several derived units.}
+  \begin{tabular}{lll}
+    \toprule
+    \multicolumn{1}{c}{\bfseries combination}
+    &\multicolumn{1}{c}{\bfseries symbol}
+    &\multicolumn{1}{c}{\bfseries measures}%
+    \\%
+    \midrule%
+    % 
+    \si{\radian} & & angular position \\%
+    \si{\meter\squared} && area \\%
+    \si{\meter\cubed} && volume \\%
+    \si{\meter\per\second} &  & velocity \\%
+    \si{\radian\per\second} &  & angular velocity \\%
+    \si{\meter\per\second\squared} &  & acceleration \\%
+    \si{\radian\per\second\squared} &  & angular acceleration \\%
+    \si{\kilo\gram\meter\per\second\squared} & \si{\newton} & force \\%
+    \si{\kilo\gram\meter\squared\per\second\squared} & \si{\newton.\meter} & torque \\%
+    \si{\kilo\gram\meter\squared\per\second\squared} & \si{\joule}, \si{\newton\meter} &
+    energy
+    %\footnote{%
+    %  Also: work (and torque)
+    %  % 
+    %}%
+    \\%
+    \si{\kilo\gram\meter\squared\per\second\cubed} & \si{\watt}, \si{\joule\per\second} &
+    power \\%
+    \si{\kilo\gram\meter\per\second} && linear momentum \\%
+    \si{\kilo\gram\meter\squared\radian\per\second} && angular momentum \\%
+    \si{\kilo\gram\per\meter\per\second\squared} & \si{\pascal}, \si{\newton\per\meter\squared} &
+    pressure
+    %\footnote{%
+    %  Also: stress
+    %  % 
+    %}%
+    \\%
+    \si{\kilo\gram\per\second\squared} & \si{\newton\per\meter} & spring constant \\%
+    \si{\per\second} & \si{\hertz} & frequency \\%
+    \si{\radian\per\second} & & angular frequency \\%
+    \si{\radian\per\meter} && angular wavenumber \\%
+    \si{\per\meter} && linear density
+    %\footnote{%
+    %  Also: linear wavenumber
+    %  % 
+    %}%
+    \\%
+    \si{\per\meter\squared} && areal density \\%
+    \si{\per\meter\cubed} && volumetric density \\%
+    \bottomrule
+  \end{tabular}
+\end{table}
+% \end{minipage}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Prefixes and their powers make number representations compact and
+consistent. }
+\begin{scriptsize}
+  \begin{tabular}{llll}
+    \toprule
+    \multicolumn{1}{c}{\bfseries name}
+    &\multicolumn{1}{c}{\bfseries sym.}
+    &\multicolumn{1}{c}{\bfseries power}
+    &\multicolumn{1}{c}{\bfseries decimal}%
+    \\%
+    \midrule                   &                                  \\%
+    \arrayrulecolor{gray!50!white}%
+    % 
+    yocto & \si{\yocto}  & \num{e-24}& \num{0.000000000000000000000001} \\%
+    zepto & \si{\zepto}  & \num{e-21}& \num{0.000000000000000000001}    \\%
+    atto  & \si{\atto }  & \num{e-18}& \num{0.000000000000000001}       \\%
+    femto & \si{\femto}  & \num{e-15}& \num{0.000000000000001}          \\%
+    pico  & \si{\pico }  & \num{e-12}& \num{0.000000000001}             \\%
+    nano  & \si{\nano }  & \num{e-9} & \num{0.000000001}                \\%
+    micro & \si{\micro}  & \num{e-6} & \num{0.000001}                   \\%
+    milli & \si{\milli}  & \num{e-3} & \num{0.001}                      \\%
+    \midrule
+    % 
+    centi & \si{\centi}  & \num{e-2} & \num{0.01}                       \\%
+    deci  & \si{\deci }  & \num{e-1} & \num{0.1}                        \\%
+          &              & $10^0$    & \num{1}                          \\%
+    deca  & \si{\deca }  & \num{e1}  & \num{10}                         \\%
+    hecto & \si{\hecto}  & \num{e2}  & \num{100}                        \\%
+    \midrule
+    % 
+    kilo  & \si{\kilo} & \num{e3}  & \num{1000}                       \\%
+    mega  & \si{\mega} & \num{e6}  & \num{1000000}                    \\%
+    giga  & \si{\giga} & \num{e9}  & \num{1000000000}                 \\%
+    tera  & \si{\tera} & \num{e12} & \num{1000000000000}              \\%
+    peta  & \si{\peta} & \num{e15} & \num{1000000000000000}           \\%
+    exa   & \si{\exa } & \num{e18} & \num{1000000000000000000}        \\%
+    zetta & \si{\zetta} & \num{e21} & \num{1000000000000000000000}     \\%
+    yotta & \si{\yotta} & \num{e24} & \num{1000000000000000000000000}  \\%
+    \arrayrulecolor{black}
+    \bottomrule
+  \end{tabular}
+\end{scriptsize}
+\end{table}

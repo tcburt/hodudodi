@@ -1,0 +1,25 @@
+\section*{Number State}
+\begin{itemize}
+\item [$\ket{n}$:] \emph{number} state with exactly $n$ quanta (AKA Fock)
+\item [$\qOpAnnihilation\ket{n} = \sqrt{n}\ket{n-1}$:] \emph{annihilation}
+  operator $\qOpAnnihilation$ removes a quanta
+  (AKA destruction, lowering)
+\item [$\qOpCreation\ket{n} = \sqrt{n+1}\ket{n+1}$:] \emph{creation}
+  operator $\qOpCreation$ introduces a quanta
+  (AKA raising)
+\item [$\qOpNumber\ket{n} \equiv \qOpCreation\qOpAnnihilation\ket{n} =
+  n\ket{n}$:] \emph{number} operator $\qOpNumber \equiv \qOpCreation\qOpAnnihilation$ counts quanta
+\item [$\ket{n} = (n!)^{-1/2} (\qOpCreation)^n\ket{0}$:] generate number
+state $\ket{n}$ from a vacuum state $\ket{0}$
+\end{itemize}
+
+\subsection*{Commutators}
+\begin{itemize}
+\item [$\commutator{\qOpAnnihilation}{\qOpCreation} = 1$]
+\item [$\commutator{\qOpAnnihilation}{(\qOpCreation)^n} =
+  n(\qOpAnnihilation^\dagger)^{n-1}$] 
+\item [$\commutator{\qOpAnnihilation^n}{\qOpCreation} =
+  n(\qOpAnnihilation)^{n-1}$] 
+\item [$\commutator{\qOpAnnihilation}{\exp(\beta\qOpCreation)} =
+  \beta(\exp(\beta\qOpCreation)$]  
+\end{itemize} 

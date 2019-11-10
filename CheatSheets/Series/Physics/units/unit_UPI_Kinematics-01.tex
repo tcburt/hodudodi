@@ -1,0 +1,53 @@
+\section{Kinematics}
+Descriptors of linear motion begin with position $\vec{r}$ and of
+angular motion with $\theta_q$
+\begin{align*}
+  \vec{v} &= d\vec{r}/dt  & \vec{\omega}_q &= d\theta_q/dt\\
+  \vec{a} &= d\vec{v}/dt  & \vec{\alpha}_q &= d\vec{\omega}_q/dt.
+\end{align*}
+%-%For general acceleration
+%-%\begin{align*}
+%-%  v_q &= v_{q_0} + \textstyle\int_0^t a_q dt  & \omega_q &= \omega_{q_0} + \textstyle\int_0^t \alpha_q dt\\
+%-%  q &= q_0 + \textstyle\int_0^t v_q dt & \theta_q &= \theta_{q_0} + \textstyle\int_0^t \omega_q dt.
+%-%\end{align*}
+For constant acceleration
+\begin{align*}
+q &= q_0 + v_{q_0} t + \tfrac{1}{2}a_q t^2 &\theta_q &= \theta_{q_0} + \omega_{q_0} t + \tfrac{1}{2}\alpha_q t^2\\
+v_q &= v_{q_0} + a_q t  & \omega_q &= \omega_{q_0} + \alpha_q t\\
+v_q^2 &= v_{q_0}^2 + 2a_q(q-q_0)  &  \omega_q^2 &= \omega_{q_0}^2 + 2\alpha_q(\theta_q-\theta_{q_0})\\
+\Delta q &= \tfrac{1}{2}(v_{q_0} + v_q)t  & \Delta \theta_q &= \tfrac{1}{2}(\omega_{q_0} + \omega_q)t.
+\end{align*}
+Momentum, impulse, Newton's first law, and Newton's second law are 
+\begin{align*}
+  \vec{p} &= m\vec{v}  & \vec{L} &= I\vec{\omega}\\
+  \vec{J} &= \Delta \vec{p}  & \vec{J} &= \Delta \vec{L}\\
+  \vec{F} &= d\vec{p}/dt  & \vec{\tau} &= d\vec{L}/dt\\
+  \textstyle\sum \vec{F} &= m\vec{a}  & \textstyle\sum \vec{\tau} &= I\vec{\alpha}.
+\end{align*}
+Symmetry of physical laws with respect to translation and rotation begets
+conservation of momentum
+\begin{align*}
+  \vec{p}_1 &= \vec{p}_2 & \vec{L}_1 &= \vec{L}_2.
+\end{align*}
+
+Connections between linear and angular kinematics start with the definition
+of an angle as the ratio of arc length $s$ to radius $r$
+\begin{align*}
+  \theta &= s/r\\
+  \vec{v}_{\text{tan}} &= \vec{\omega} \times \vec{r} & \vec{L} &= \vec{r} \times \vec{p}\\
+  \vec{a}_{\text{tan}} &= \vec{\alpha} \times \vec{r} & \vec{\tau} &= \vec{r} \times \vec{F}  
+\end{align*}
+
+Moment of inertia $I$ is a measure of the resistance of a body to change its
+rotational motion and depends on the distribution of mass \emph{about a
+  particular axis}
+\begin{align*}
+  I_{\text{discrete}} &= \textstyle\sum_j r_j^2 m_j\\
+  I_{\text{continuous}} &= \textstyle\int r^2 dm
+\end{align*}
+About a \emph{parallel} axis the moment of inertia is related to the
+distance $d$ from the center of mass
+\begin{equation*}
+  I = I_{\text{cm}} + M d^2
+\end{equation*}
+

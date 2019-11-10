@@ -1,0 +1,42 @@
+\section*{Postulates}
+\begin{enumerate}
+\item States describe the system
+\item States evolve
+\item States yield Probabilistic measurements
+\item Systems can be composite states
+\end{enumerate}
+\emph{Notation}
+\begin{itemize}
+\item [$U$:] Unitary operator
+\item [$M_m$:] Measurement operator with outcome $m$
+\item [$p(m)$:] Probability to measure outcome $m$
+\item [$p_i$:] Ensemble probability to be in the $i$th state
+\end{itemize}
+
+
+
+\subsection*{Vector States}
+\begin{itemize}
+\item [state:] $\ket{\psi}$
+\item [evolution:] $\ket{\psi} \Rightarrow U\ket{\psi}$
+\item [measurement:] $p(m) = \expectationvalue{M^\dagger_m M_m}{\psi}$ and
+  $\ket{\psi_m} = M_m\ket{\psi} / p(m)$
+\item [composition:] $\ket{\psi} = \ket{\psi_1} \otimes \ket{\psi_2} \otimes
+  \dotsm \otimes \ket{\psi_n}$
+\end{itemize}
+\subsection*{Ensemble States}
+\begin{itemize}
+\item [state:] $\rho = \sum_i p_i\outerproduct{\psi_i}$
+\item [evolution:] $\rho \Rightarrow \sum_i p_iU\outerproduct{\psi_i}U^\dagger$
+\item [measurement:] $p(m) = \sum_i p_i \trace(M^\dagger_m M_m\outerproduct{\psi_i})$ and
+  $\rho_m = \sum_i p_i M_m\outerproduct{\psi_i} M_m^\dagger/ p(m)$
+\item [composition:] $\rho = \sum_i p_i \rho_i = \sum_i p_i \sum_j p_{ij}\outerproduct{\psi_{ij}}$
+\end{itemize}
+\subsection*{Density Operator}
+\begin{itemize}
+\item [state:] $\rho = \sum_i p_i\rho_i$
+\item [evolution:] $\rho \Rightarrow U\rho U^\dagger$
+\item [measurement:] $p(m) = \trace(M^\dagger_m M_m\rho)$ and
+  $\rho_m = M_m\rho M^\dagger_m / p(m)$
+\item [composition:] $\rho = \rho_1\otimes \rho_2\otimes \dotsm \otimes\rho_n$
+\end{itemize}

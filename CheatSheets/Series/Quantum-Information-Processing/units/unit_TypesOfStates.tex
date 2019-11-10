@@ -1,0 +1,92 @@
+\section*{Types of States}
+Quantum states are either pure or mixed. A state can be a superposition of
+other states, which is patently \emph{not} a mixed state since the
+coefficients of the states are 
+\subsection*{Pure or Mixed}
+\subsubsection*{Pure State (1 or more systems)}
+A pure state can describe a single or multiple quantum systems.
+\begin{itemize}
+\item [$\ket{\psi_{\text{pure}}}$:] known exactly
+\item [$\ket{\psi_{\text{pure}}^{(\text{notEntangled})}} =
+  \ket{\psi_1}\otimes\ket{\psi_2}\otimes 
+  \dotsm \otimes \ket{\psi_n}$:] all constituent systems can be factored 
+\item [$\rho_{\text{pure}} \equiv \outerproduct{\psi_{\text{pure}}}$:] density operator is outer product
+\item [$\trace(\rho_{\text{pure}}^2) = 1$:] unity trace of squared density operator
+\end{itemize}
+
+
+\subsubsection*{Mixed State (1 or more systems)}
+A mixed state is a combination of other states where the coefficients are
+the probability to be in the $i$th state $p_i$, representing our ignorance
+of the actual state it is in. Note that mixtures are represented by the
+density matrix $\rho$ rather than the states themselves.
+\begin{itemize}
+\item [$\rho_{\text{mixed}} = \sum_i p_i\outerproduct{\psi_i}$:]
+  \emph{statistical} combination, not exactly known
+\item [$\trace(\rho_{\text{mixed}}^2) < 1$:] less than unity trace of squared density operator
+\end{itemize}
+
+\subsection*{Superposition State}
+A superposition state is a combination of other states where the
+coefficients are complex \emph{probability \textbf{amplitudes}} $\pi_i$ to be in
+the $i$th state. 
+\begin{itemize}
+\item [$p_i = \absolutevalue{\pi_i}^2 = \pi_i^* \pi_i$:] probability to be
+  in $i$th state is the squared absolute value of the probability amplitude
+\item [$\ket{\psi} = \sum_i \pi_i\ket{\psi}$:] 
+\end{itemize}
+
+\subsection*{Entangled State (2 or more systems)}
+\begin{itemize}
+\item [$\ket{\psi_{\text{entangled}}}$:] \emph{joint} system is exactly
+  known
+\item [$\ket{\psi_{\text{entangled}}} \neq \ket{\psi_1}\otimes\ket{\psi_2}\otimes
+  \dotsm \otimes \ket{\psi_n}$:] constituent systems \emph{cannot} be factored 
+\item [$\trace(\rho_{\text{entangled}}^2) = 1$:] unity trace of squared
+  density operator for \emph{joint} system
+\item [$\rho_{\text{entangled}} \equiv
+  \outerproduct{\psi_{\text{entangled}}}$:] density operator is outer
+  product
+\item [$\rho_{\text{entangled}}^A = \trace_B(\rho_{\text{entangled}}^{AB})$:]
+      susbsystem $A$ obtained via \emph{partial trace} over subsystem $B$
+\item [$\trace_A([{\rho_{\text{entangled}}^A]^2}) < 1$:] less than unity trace of
+  squared density operator for \emph{subsystem}
+  \begin{itemize}
+  \item Subsystem is in a \emph{mixed} state whereas the full system is a
+    \emph{pure} state --- fingerprint of entanglement
+  \end{itemize}
+
+
+\end{itemize}
+
+
+% Eigenstates
+\subsection*{Eigenstates}
+\begin{itemize}
+\item [$\mathcal{O}\ket{\psi^{\text{(eigen)}}} = \lambda
+  \ket{\psi^{\text{(eigen)}}}$:] an eigenstate $\ket{\psi^{\text{(eigen)}}}$
+  \emph{of an operator} $\mathcal{O}$ remains unchanged after action by the
+  operator except for a scale factor called the eigenvalue $\lambda$
+\item [$c(\lambda) = \det \lvert \mathcal{O} - \lambda I \rvert$:] the
+  characteristic function $c(\lambda)$ is \emph{independent of the
+  representation} of the operator $\mathcal{O}$ (NOTE: $I$ is the identity
+  matrix.) 
+\item [$0 = \det \lvert \mathcal{O} - \lambda I \rvert$:] solutions where the
+  characteristic equation is zero yield the eigenvalues $\lambda_i$
+\item [$\mathcal{O}^{\text{diag}} = \sum_{i}
+  \lambda_i\dyad{\psi_i^{\text{(eigen)}}}$:] a diagonal representation of
+  the operator $\mathcal{O}^{\text{diag}}$, if it exists, presents the
+  eigenvalues $\lambda_i$ along the diagonal that correspond to 
+  eigenstates $\ket{\psi_i^{\text{(eigen)}}}$ which form a complete,
+  orthonormal set for $\mathcal{O}^{\text{diag}}$
+  \begin{equation*}
+    \textstyle %
+    \mathcal{O}^{\text{diag}} = %
+    \begin{pmatrix}
+      \lambda_1 & 0 & \cdots & 0 \\
+      0 & \lambda_2 & \cdots & 0 \\
+      0 & 0 & \ddots & 0 \\
+      0 & 0 & \cdots & \lambda_n
+    \end{pmatrix}
+  \end{equation*}
+\end{itemize}

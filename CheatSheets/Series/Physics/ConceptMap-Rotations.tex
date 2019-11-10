@@ -1,0 +1,104 @@
+\documentclass{article}
+\usepackage[%
+  left=1.5cm, right=1.5cm, top=1.5cm, bottom=2.0cm%
+]{geometry}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Kinematics Motion Concept Maps}
+\author{TCB}
+
+\begin{document}
+\maketitle
+\begin{multicols}{2}
+
+
+\begin{center}
+Translational
+\end{center}
+\input{Graphics/ConceptMap-Translation-Describe-Cause-Account}
+
+\begin{tabular}{>{$}l<{$}>{\RaggedRight}p{0.8\linewidth}}
+  \toprule
+  t & time \\
+  \vec{r} & position\\
+  \vec{v} & velocity\\
+  \vec{a} & acceleration\\
+  \midrule
+  m & mass\\
+  \vec{p} & momentum\\
+  \vec{F} & force\\
+  P & power\\
+  \vec{J} & impulse\\
+  W & work\\
+  \midrule %
+  U & potential energy\\
+  K & kinetic energy\\
+  U_{\text{cons}} & potential due to conservative interactions\\
+  W_{\text{cons}} & work done by conservative interactions\\
+  U_{\text{int}} & internal energy\\
+  W_{\text{other}} & work done by interactions not accounted for explicitly\\
+  E & total energy\\
+  \midrule %
+  q & generic variable for discussion of operations\\
+  \Delta q & difference between final and initial values of $q$ ($\Delta q
+  \equiv q_{\text{final}} - q_{\text{initial}}$)\\
+  dq & differential element $q$\\
+  \vec{q}_1\cdot\vec{q}_2 & scalar (dot) product between $q_1$ and $q_2$
+  ($\vec{q}_1\cdot\vec{q}_2 = |\vec{q}_1||\vec{q}_2|\cos(\phi_{1,2})$)\\
+  \nabla q & gradient of the scalar $q$\\
+  \bottomrule
+\end{tabular}
+
+
+
+
+\newpage
+\begin{center}
+Rotational
+\end{center}
+
+\input{Graphics/ConceptMap-Rotation-Describe-Cause-Account}
+
+\begin{tabular}{>{$}l<{$}>{\RaggedRight}p{0.8\linewidth}}
+  \toprule
+  t & time \\
+  \theta_q & angular position around axis $q$\\
+  \vec{\omega}_q &  angular velocity around axis $q$\\
+  \vec{\alpha}_q &  angular acceleration around axis $q$\\
+  \midrule
+  I_q & moment of inertia about axis $q$\\
+  \vec{L} & angular momentum\\
+  \vec{\tau} & torque\\
+  P & power\\
+  \vec{J} & impulse\\
+  W & work\\
+  \midrule %
+  U & potential energy\\
+  K & kinetic energy\\
+  U_{\text{cons}} & potential due to conservative interactions\\
+  W_{\text{cons}} & work done by conservative interactions\\
+  U_{\text{int}} & internal energy\\
+  W_{\text{other}} & work done by interactions not accounted for explicitly\\
+  E & total energy\\
+  \midrule %
+  q & generic variable for discussion of operations\\
+  \Delta q & difference between final and initial values of $q$ ($\Delta q
+  \equiv q_{\text{final}} - q_{\text{initial}}$)\\
+  dq & differential element $q$\\
+  \hat{n} & unit normal vector to the plane defined by $q_1$ and $q_2$;
+  direction defined by right-hand rule\\
+  \vec{q}_1\cdot\vec{q}_2 & scalar (dot) product between $q_1$ and $q_2$
+  ($\vec{q}_1\cdot\vec{q}_2 = |\vec{q}_1||\vec{q}_2|\cos(\phi_{1,2})$)\\
+  \vec{q}_1 \times \vec{q}_2 & vector product between $q_1$ and $q_2$
+  ($\vec{q}_1\times\vec{q}_2 = |\vec{q}_1||\vec{q}_2|\sin(\phi_{1,2})\;\hat{n}$)\\
+  \bottomrule
+\end{tabular}
+\end{multicols}
+\end{document}

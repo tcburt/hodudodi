@@ -1,0 +1,50 @@
+\section{Waves}
+
+A periodic wave in space characterized by the distance two corresponding
+values of the function and is called the wavelength $\lambda$.  The speed
+of a wave is
+\begin{equation*}
+  v = f \lambda.
+\end{equation*}
+Any function of the form $f(x-vt)$ with finite support describes a
+traveling wave in space and time with the forms
+\begin{align*}
+  y_{\text{pos-dir}} &= A_{+}\cos(k_{+}x - \omega_{+}t + \phi_{+})\\
+  y_{\text{neg-dir}} &= A_{-}\cos(k_{-}x + \omega_{-}t + \phi_{-}).
+\end{align*}
+The angular wavenumber $k$ is defined as
+\begin{equation*}
+  k \equiv 2\pi / \lambda
+\end{equation*}
+which yields another relation for wave speed
+\begin{equation*}
+  \omega = kv.
+\end{equation*}
+
+Traveling waves can move in both positive and negative directions through time.
+\begin{align*}
+  y_{j+} &= A_{j+}\cos(k_{j+}x - \omega_{j+}t + \phi_{j+})\\
+  y_{j-} &= A_{j-}\cos(k_{j-}x + \omega_{j-}t + \phi_{j-})
+\end{align*}
+
+
+In general, waves add at each point in space and time
+\begin{align*}
+  y(x,t) &= \quad\sum_{j=1}^N %
+    A_{j+}\cos(k_{j+}x - \omega_{j+}t + \phi_{j+})%
+    \\
+  &\quad + \sum_{j=1}^N %
+    A_{j-}\cos(k_{j-}x + \omega_{j-}t + \phi_{j-}).
+\end{align*}
+When waves add interference occurs.  For two identical waves save the phase
+difference
+\begin{equation*}
+  y(x,t) = 2A\cos(kx-\omega t + \tfrac{1}{2}\phi) \cos(\tfrac{1}{2}\phi)
+\end{equation*}
+leading to the notions of completely constructive, destructive, and simply
+reductive interference
+\begin{align*}
+  \phi_{\text{constructive}} &= n\pi & n= 0, \pm 1, \pm 2, \dotsc\\%
+  \phi_{\text{destructive}} &= (2n+1)\pi & n= 0, \pm 1, \pm 2, \dotsc\\%
+  \phi_{\text{reductive}} &\neq ( \phi_{\text{constr}}, \phi_{\text{destr}})
+\end{align*}

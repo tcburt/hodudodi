@@ -1,0 +1,74 @@
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+%\usepackage{amsmath}
+
+
+\begin{tikzpicture}
+  \def\baseSep{2.5}
+  % Energy section: nodes
+  \node (E) at (\baseSep, 0) {$E$};
+  \node (U) at ($(E)+(-\baseSep,\baseSep)$) {$U$};
+  \node (K) at ($(E)+(\baseSep,\baseSep)$) {$K$};
+
+  % Torque section: nodes
+  \node (vtau) at ($(E)+(0, 3*\baseSep)$) {$\vec{\tau}$};
+  \node (vJ) at ($(vtau)+(-\baseSep, -\baseSep)$) {$\vec{J}$};
+  \node (W) at ($(vtau)+(\baseSep, -\baseSep)$) {$W$};
+  \node (vL) at ($(vtau)+(-\baseSep, \baseSep)$) {$\vec{L}$};
+  \node (P) at ($(vtau)+(\baseSep, \baseSep)$) {$P$};
+
+  % Descriptor section: nodes
+  \node (vtheta) at ($(vtau)+(0,3*\baseSep)$) {$\theta_q$};
+  \node (vomega) at ($(vtheta)+(-\baseSep, -\baseSep)$) {$\vec{\omega}_q$};
+  \node (valpha) at ($(vtheta)+(\baseSep, -\baseSep)$) {$\vec{\alpha}_q$};
+
+
+  % Descriptor section: connections
+  \draw (vomega) -- (vtheta) node [midway, below, sloped] %
+  {$\vec{\omega}_q=d\theta_q/dt \;\hat{q}$};
+  \draw (vtheta) -- (valpha) node [midway, below, sloped] %
+  {$\vec{\alpha}_q=d^2\theta_q/dt^2 \;\hat{q}$}; 
+  \draw (vomega) -- (valpha) node [midway, above, sloped] %
+  {$\vec{\alpha}_q=d\vec{\omega}_q/dt$}; 
+
+  % Torque section: connections
+  \draw (vL) -- (vtau) node [midway, above, sloped] %
+  {$d\vec{L}=\vec{\tau}dt$};
+  \draw (vtau) -- (P) node [midway, above, sloped] %
+  {$dP=\vec{\tau}\cdot d\vec{\omega}_q$};
+  \draw (vtau) -- (W) node [midway, above, sloped] %
+  {$dW=\vec{\tau}\cdot d\theta \;\hat{q}$};
+  \draw (vtau) -- (W) node [midway, below, sloped] %
+  {$dW=\vec{\tau}\cdot \vec{\omega}_qdt$};
+  \draw (vJ) -- (vtau) node [midway, above, sloped] %
+  {$d\vec{J}=\vec{\tau}dt$};
+  \draw (vJ) -- (vL) node [midway, below, sloped] %
+  {$\vec{J}=\Delta\vec{L}$};
+  \draw (W) -- (P) node [midway, above, sloped] %
+  {$dW=P dt$};
+
+  % Energy section: connections
+  \draw (U) |- (E);
+  \draw (K) |- (E);
+  \node (consE-abstract) at ($(E)+(0,\baselineskip)$) %
+  {$E_1=E_2$};
+  \node (consE-Wother) at ($(E)+(0,2*\baselineskip)$) %
+  {$U_1+K_1+W_{\text{other}}=U_2+K_2$};
+  \node (consE-Uint) at ($(E)+(0,3*\baselineskip)$) %
+  {$U_1+K_1=U_2+K_2+\Delta U_{\text{int}}$};
+
+  % Inter section: connections
+  % Energy and torque
+  \draw [thick, blue] (U) -- (W) node [midway, above, sloped, blue] %
+  {$W_{\text{cons}}=-\Delta U_{\text{cons}}$};
+  \draw [thick, blue] (U) -- (W) node [midway, below, sloped, blue] %
+  {$W_{\text{other}}=-\Delta U_{\text{int}}$};
+  \draw [thick, blue] (K) -- (W) node [midway, above, sloped, blue] %
+  {$W=\Delta K$};
+  % Force and descriptors
+  \draw [thick, blue] (vtau) to[out=90, in=-90] (valpha);
+  \path (vtau) -- (valpha) node [midway, above, rotate=47, blue] %
+  {$\vec{\tau}_q=I_q\vec{\alpha}_q$};
+  \draw [thick, blue] (vL) -- (vomega) node [midway, below, sloped, blue] %
+  {$\vec{L}_q=I_q\vec{\omega}_q$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[line cap=round, line join=round, >=Triangle, scale=0.8, every node/.style={transform shape}]
+  \clip(-2.19,-2.79) rectangle (2.66,2.78);
+  %\shade[shading=color wheel] [even odd rule] (0,0) circle (2cm);
+  \draw(0,0) circle (2cm);
+  \draw [rotate around={0.:(0.,0.)},dash pattern=on 3pt off 3pt] (0,0)
+  ellipse (2cm and 0.9cm);
+
+  % Coordinate system
+  \draw [thick] (0,0) -- (0,2) node [above] {$z$};
+  \draw [dotted] (0,0) -- (0,-2); % -z
+  \draw [thick] (0,0) -- (-0.81,-0.79) node [below left] {$x$};
+  \draw [dotted] (0,0) -- (0.81,0.79);% -x
+  \draw [thick] (0,0) -- (2,0) node [right] {$y$};
+  \draw [dotted] (-2,0) -- (0,0); % -y
+  \draw (0,-2.3) node [below] {$\mathbf{1}$};
+  \draw (0,2.3) node [above] {$\mathbf{0}$};
+  % Vector
+  \draw [ultra thick, arrows={-Diamond[fill=black]}] (0,0)-- (0,2);% 0
+  \draw [ultra thick, arrows={-Diamond[fill=white]}] (0,0)-- (0,-2);% 1
+
+  %-?-%\scriptsize
+  %-?-%\draw [fill] (0,0) circle (1.5pt);
+  %-?-%\draw [fill] (0.7,1.1) circle (0.5pt);
+\end{tikzpicture}

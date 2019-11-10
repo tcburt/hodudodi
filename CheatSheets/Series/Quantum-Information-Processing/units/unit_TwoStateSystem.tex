@@ -1,0 +1,133 @@
+\section*{Two-state System}
+
+\begin{center}
+  \begin{tabular}{>{$\textstyle}c<{$}*{2}{>{$\textstyle}r<{$}}}
+    \toprule %
+    \multicolumn{1}{c}{$\mathcal{O}$} %
+    &\multicolumn{1}{c}{$\lambda$} %
+    &\multicolumn{1}{c}{$\ket{\psi^{\text{(eigen)}}}$} %
+    \\ \midrule %
+    \arrayrulecolor{lightgray} %
+    \sigma_x \equiv X %
+    &\num{+1} %
+    & \frac{1}{\sqrt{2}}\begin{pmatrix} 1 \\ 1 \end{pmatrix} %
+    \\%
+    \begin{pmatrix} 0 & 1\\ 1 & 0\end{pmatrix} %
+      & \num{-1} %
+      & \frac{1}{\sqrt{2}}\begin{pmatrix} -1 \\ 1 \end{pmatrix} %
+      \\ \hline %
+      \sigma_y\equiv Y %
+      & \num{+1} %
+      & \frac{1}{\sqrt{2}}\begin{pmatrix} -1 \\ -i \end{pmatrix} %
+      \\ %
+      \begin{pmatrix} 0 & -i\\ i & 0\end{pmatrix} %
+        & \num{-1} %
+        & \frac{1}{\sqrt{2}}\begin{pmatrix} -1 \\ i \end{pmatrix} %
+        \\ \hline %
+    \sigma_z\equiv Z %
+    & \num{+1} %
+    & \begin{pmatrix} 1 \\ 0 \end{pmatrix} %
+    \\ %
+    \begin{pmatrix} 1 & 0\\ 0 & -1 \end{pmatrix} %
+        & \num{-1} %
+    & \begin{pmatrix} 0 \\ 1 \end{pmatrix} %
+    \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{align*}
+\ket{\psi} &= \cos(\theta/2)\ket{0} + e^{i\phi}\sin(\theta/2)\ket{1} %
+\\ %
+(x, y, z) &= (\sin\theta \cos\phi, \sin\theta \sin\phi, \cos\theta)
+\end{align*}
+
+\begin{center}
+  \begin{tabular}{>{$\textstyle}c<{$}*{3}{>{$\textstyle}r<{$}}}
+    \toprule %
+    \multicolumn{1}{c}{$\mathcal{O}$} %
+    &\multicolumn{1}{c}{$\lambda$} %
+    &\multicolumn{1}{c}{$\ket{\psi^{\text{(eigen)}}}$} %
+    &\multicolumn{1}{c}{$(\theta, \phi)$}%
+    \\ \midrule %
+    \arrayrulecolor{lightgray} %
+    \sigma_x \equiv X %
+    &\num{+1} %
+    & \frac{1}{\sqrt{2}} \left(\ket{0} + \ket{1} \right) %
+    & (\frac{\pi}{2},0) %
+    \\%
+    \dyad{0}{1} + \dyad{1}{0} %
+    & \num{-1} %
+    & \frac{1}{\sqrt{2}} \left(\ket{0} - \ket{1} \right) %
+    & (\frac{\pi}{2},-\pi) %
+    \\ \hline %
+    
+    \sigma_y\equiv Y %
+    & \num{+1} %
+    & \frac{1}{\sqrt{2}} \left( \ket{0} + i \ket{1} \right) %
+    & (\frac{\pi}{2},\frac{\pi}{2}) %
+    \\ %
+    -i\left( \dyad{0}{1} - \dyad{1}{0} \right) %
+      & \num{-1} %
+      & \frac{1}{\sqrt{2}} \left(\ket{0} - i \ket{1} \right) %
+    & (\frac{\pi}{2},-\frac{\pi}{2}) %
+      \\ \hline %
+      
+    \sigma_z\equiv Z %
+    & \num{+1} %
+    & \ket{0} %
+    & (0,0) %
+    \\ %
+    \dyad{0}{0} - \dyad{1}{1} %
+    & \num{-1} %
+    & \ket{1} %
+    & (\pi, 0)
+    \\
+    \arrayrulecolor{black} %
+\bottomrule
+\end{tabular}
+\end{center}
+
+% Matches the work in QIS-Exercises
+%\begin{center}
+%  \begin{tabular}{>{$\textstyle}c<{$}*{3}{>{$\textstyle}r<{$}}}
+%    \hline %
+%    \mathcal{O} & \lambda & \psi^{\text{(eigen)}} & (\theta, \phi)%
+%    \\ \hline %
+%    \sigma_x \equiv X %
+%    &\num{+1} %
+%    & \frac{1}{\sqrt{2}} \left( +\ket{0} + \ket{1} \right) %
+%    & (\frac{\pi}{2},0) %
+%    \\%
+%    \dyad{0}{1} + \dyad{1}{0} %
+%    & \num{-1} %
+%    & \frac{1}{\sqrt{2}} \left( -\ket{0} + \ket{1} \right) %
+%    & (\frac{\pi}{2},\pi) %
+%    \\ \hline %
+%    
+%    \sigma_y\equiv Y %
+%    & \num{+1} %
+%    & \frac{1}{\sqrt{2}} \left( -\ket{0} - i \ket{1} \right) %
+%    & (\frac{\pi}{2},\frac{\pi}{2}) %
+%    \\ %
+%    -i\left( \dyad{0}{1} - \dyad{1}{0} \right) %
+%      & \num{-1} %
+%      & \frac{1}{\sqrt{2}} \left( -\ket{0} + i \ket{1} \right) %
+%    & (\frac{\pi}{2},-\frac{\pi}{2}) %
+%      \\ \hline %
+%      
+%    \sigma_z\equiv Z %
+%    & \num{+1} %
+%    & \ket{0} %
+%    & (0,0) %
+%    \\ %
+%    \dyad{0}{0} - \dyad{1}{1} %
+%    & \num{-1} %
+%    & \ket{1} %
+%    & (\pi, 0)
+%    \\
+%\hline
+%\end{tabular}
+%\end{center}
+
+\subsection*{Commutators for Two-State System}

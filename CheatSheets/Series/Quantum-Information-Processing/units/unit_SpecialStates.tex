@@ -1,0 +1,39 @@
+\section*{Types of States}
+\subsection*{Pure State (1 or more systems)}
+A pure state can describe a single or multiple quantum systems.
+\begin{itemize}
+\item [$\ket{\psi_{\text{pure}}}$:] known exactly
+\item [$\ket{\psi_{\text{pure}}} = \ket{\psi_1}\otimes\ket{\psi_2}\otimes
+  \dotsm \otimes \ket{\psi_n}$:] all constituent systems can be factored 
+\item [$\rho_{\text{pure}} \equiv \outerproduct{\psi_{\text{pure}}}$:] density operator is outer product
+\item [$\trace(\rho_{\text{pure}}^2) = 1$:] unity trace of squared density operator
+\end{itemize}
+
+\subsection*{Mixed State (1 or more systems)}
+\begin{itemize}
+\item [$\rho_{\text{mixed}} = \sum_i p_i\outerproduct{\psi_i}$:]
+  \emph{statistical} combination, not exactly known
+\item [$\trace(\rho_{\text{mixed}}^2) < 1$:] less than unity trace of squared density operator
+\end{itemize}
+
+\subsection*{Entangled State (2 or more systems)}
+\begin{itemize}
+\item [$\ket{\psi_{\text{entangled}}}$:] \emph{joint} system is exactly
+  known
+\item [$\ket{\psi_{\text{entangled}}} \neq \ket{\psi_1}\otimes\ket{\psi_2}\otimes
+  \dotsm \otimes \ket{\psi_n}$:] constituent systems \emph{cannot} be factored 
+\item [$\trace(\rho_{\text{entangled}}^2) = 1$:] unity trace of squared
+  density operator for \emph{joint} system
+\item [$\rho_{\text{entangled}} \equiv
+  \outerproduct{\psi_{\text{entangled}}}$:] density operator is outer
+  product
+\item [$\rho_{\text{entangled}}^A = \trace_B(\rho_{\text{entangled}}^{AB})$:]
+      susbsystem $A$ obtained via \emph{partial trace} over subsystem $B$
+\item [$\trace_A([{\rho_{\text{entangled}}^A]^2}) < 1$:] less than unity trace of
+  squared density operator for \emph{subsystem}
+  \begin{itemize}
+  \item Subsystem is in a \emph{mixed} state whereas the full system is a
+    \emph{pure} state --- fingerprint of entanglement
+  \end{itemize}
+\end{itemize}
+  

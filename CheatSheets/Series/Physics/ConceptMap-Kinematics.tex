@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[%
+  left=1.5cm, right=1.5cm, top=1.5cm, bottom=2.0cm%
+]{geometry}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Kinematics Concept Map and Relationships}
+\author{TCB}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\input{Graphics/ConceptMap-Kinematics-Connections}
+\end{center}
+Main concepts in translational (left hand) and rotational (right hand)
+motion are nodes in the network.  The concepts are collected by category as
+descriptors (top), dynamics (middle), and energy (bottom). Work, energy,
+and power are common between translational and rotational motion.
+Connections between concepts are edges that are labeled with their
+mathematical relationships. Those in blue represent inter-category
+relations within each type of motion and those in red represent connections
+between linear and angular motion.  The purple edge is the special relation
+between force and potential energy. Dashed edges indicate conservation
+laws. 
+
+
+
+\newpage
+\begin{multicols}{2}
+
+  \begin{tabular}{>{$}l<{$}>{\RaggedRight}p{0.2\linewidth}>{$}l<{$}>{\RaggedRight}p{0.4\linewidth}}
+    \toprule
+    \multicolumn{2}{c}{\bfseries Linear}
+    &\multicolumn{2}{c}{\bfseries Angular}%
+    \\
+    \multicolumn{2}{c}{\bfseries  (Translational)}
+    &\multicolumn{2}{c}{\bfseries (Rotational)}%
+    \\
+
+    \midrule
+    t & time & t & time\\
+    \vec{r} & position & \theta_q & angular position around axis $q$\\
+    \vec{v} & velocity & \vec{\omega}_q &  angular velocity around axis $q$\\
+    \vec{a} & acceleration & \vec{\alpha}_q &  angular acceleration around axis $q$\\
+    \midrule
+    m & mass & I_q & moment of inertia about axis $q$\\
+    \vec{p} & momentum & \vec{L} & angular momentum\\
+    \vec{F} & force & \vec{\tau} & torque \\
+    %\midrule
+    %K_{\text{lin}} & $\frac{1}{2}mv^2$ & K_{\text{ang}} & $=\frac{1}{2}I\omega^2$\\
+    \bottomrule
+  \end{tabular}
+  
+  \begin{tabular}{>{$}l<{$}>{\RaggedRight}p{0.8\linewidth}}
+    \toprule
+    P & power\\
+    \vec{J} & impulse\\
+    W & work\\
+    \midrule %
+    U & potential energy\\
+    K & kinetic energy\\
+    U_{\text{cons}} & potential due to conservative interactions\\
+    W_{\text{cons}} & work done by conservative interactions\\
+    U_{\text{int}} & internal energy\\
+    W_{\text{other}} & work done by interactions not accounted for explicitly\\
+    E & total energy\\
+    \midrule %
+    q & generic variable for discussion of operations\\
+    \Delta q & difference between final and initial values of $q$ ($\Delta q
+    \equiv q_{\text{final}} - q_{\text{initial}}$)\\
+    dq & differential element $q$\\
+    \hat{n} & unit normal vector to the plane defined by $q_1$ and $q_2$;
+    direction defined by right-hand rule\\
+    \vec{q}_1\cdot\vec{q}_2 & scalar (dot) product between $q_1$ and $q_2$
+    ($\vec{q}_1\cdot\vec{q}_2 = |\vec{q}_1||\vec{q}_2|\cos(\phi_{1,2})$)\\
+    \vec{q}_1 \times \vec{q}_2 & vector product between $q_1$ and $q_2$
+    ($\vec{q}_1\times\vec{q}_2 = |\vec{q}_1||\vec{q}_2|\sin(\phi_{1,2})\;\hat{n}$)\\
+    \bottomrule
+  \end{tabular}
+  
+\end{multicols}
+
+
+
+
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass{article}
+\usepackage{multicol}
+\usepackage{booktabs}
+\usepackage{ragged2e}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Translational Motion Concept Map}
+\author{Timothy C. Burt}
+
+\begin{document}
+\maketitle
+\begin{multicols}{2}
+
+\input{Graphics/ConceptMap-Translation-Describe-Cause-Account}
+
+\begin{tabular}{>{$}l<{$}>{\RaggedRight}p{0.8\linewidth}}
+  \toprule
+  t & time \\
+  \vec{r} & position\\
+  \vec{v} & velocity\\
+  \vec{a} & acceleration\\
+  \midrule
+  m & mass\\
+  \vec{p} & momentum\\
+  \vec{F} & force\\
+  P & power\\
+  \vec{J} & impulse\\
+  W & work\\
+  \midrule %
+  U & potential energy\\
+  K & kinetic energy\\
+  U_{\text{cons}} & potential due to conservative interactions\\
+  W_{\text{cons}} & work done by conservative interactions\\
+  U_{\text{int}} & internal energy\\
+  W_{\text{other}} & work done by interactions not accounted for explicitly\\
+  E & total energy\\
+  \midrule %
+  q & generic variable for discussion of operations\\
+  \Delta q & difference between final and initial values of $q$ ($\Delta q
+  \equiv q_{\text{final}} - q_{\text{initial}}$)\\
+  dq & differential element $q$\\
+  \vec{q}_1\cdot\vec{q}_2 & scalar (dot) product between $q_1$ and $q_2$
+  ($\vec{q}_1\cdot\vec{q}_2 = |\vec{q}_1||\vec{q}_2|\cos(\phi_{1,2})$)\\
+  \nabla q & gradient of the scalar $q$\\
+  \bottomrule
+\end{tabular}
+\end{multicols}
+\end{document}

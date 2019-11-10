@@ -1,0 +1,19 @@
+% Definitions for section headings
+\newcommand{\colorsection}[1]{%
+  \colorbox{primaryBackground1}{%
+    \parbox[t][0em]{\dimexpr\columnwidth-2\fboxsep}{%
+      \textsection #1}}}
+\newcommand{\subcolorsection}[1]{%
+  \colorbox{primaryBackground3}{%
+    \parbox[t][0em]{\dimexpr\columnwidth-2\fboxsep}{%
+      \textsection\textsection #1}}}
+\newcommand{\subsubcolorsection}[1]{%
+  \colorbox{primaryBackground5}{%
+    \parbox[t][0em]{\dimexpr\columnwidth-2\fboxsep}{%
+      \textsection\textsection\textsection #1}}}
+	
+
+% Section headings
+\titleformat{name=\section}[block]{\sffamily}{}{0pt}{\colorsection}
+\titleformat{name=\subsection}[block]{\sffamily}{}{0pt}{\subcolorsection}
+\titleformat{name=\subsubsection}[block]{\sffamily}{}{0pt}{\subsubcolorsection}

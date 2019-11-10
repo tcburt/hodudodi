@@ -1,0 +1,29 @@
+\section*{Statistics}
+\begin{itemize}
+\item [mean:] $\mu = (1/N) \sum_{i=1}^N x_i$
+\item [variance:] $\sigma^2 = (1/N) \sum_{i=1}^N (x_i-\mu)^2$
+\item [standard deviation:] $\sigma = \sqrt{\sigma^2}$
+\end{itemize}
+
+\subsection*{Probability}
+Probability of
+\begin{itemize}
+\item [$A$:] $P(A) \in [0,1]$
+\item [$\neg A$:] $P(\neg A) = 1 - P(A)$
+\item [$A$ given $B$:] $P(A\vert B) $
+\item [$A$ or $B$:] $P(A\cup B) = P(A) + P(B) - P(A\cap B)$
+\begin{itemize}
+  \item[if $A$ is indep. of $B$] $P(A\cup B) = P(A) + P(B)$
+\end{itemize}
+\item [$A$ and $B$:] $P(A\cap B) = P(A\vert B)P(B)$
+\begin{itemize}
+  \item[if $A$ is indep. of $B$] $P(A\cap B) = P(A)P(B)$
+\end{itemize}
+\item $P(x) := Pr[X = x] := \sum_{y \in Y} P(x, y)$
+\item $P(x|y) := Pr[X = x | Y = y] := \frac{P(x,y)}{P(y)},\quad \text{if } P(y) > 0$
+\item $\forall y \in Y: \sum_{x \in X} P(x|y) = 1$ (property for any fixed $y$)
+\item $P(x, y) = P(x|y) P(y)$
+\item $P(x|y) = \frac{P(y|x)P(x)}{P(y)}$ (Bayes' rule)
+\item $P(x|y) = P(x) \Leftrightarrow P(y|x) = P(y)$ (iff $X$, $Y$ independent)
+\item $P(x_1, \ldots, x_n) = \prod_{i=1}^n P(x_i)$ (iff IID)
+\end{itemize}

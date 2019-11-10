@@ -1,0 +1,57 @@
+\section*{Binary Classification}
+A set of $N_{\text{act}}$ data instances undergo binary classification
+prediction. 
+
+\subsection*{Count}
+
+\begin{itemize}
+\item [true (positive, negative):] $N_{\text{tp}}, N_{\text{tn}}$
+%\item [true negative:] $N_{\text{tn}}$
+\item [false (positive, negative):] $N_{\text{fp}}, N_{\text{fn}}$
+%\item [false negative:] $N_{\text{fn}}$
+\item [actual positive:] $N_{\text{act-p}} = N_{\text{tp}} + N_{\text{fn}}$
+\item [actual negative:] $N_{\text{act-n}} = N_{\text{tn}} + N_{\text{fp}}$
+\item [predicted positive:] $N_{\text{prd-p}} = N_{\text{tp}} + N_{\text{fp}}$
+\item [predicted negative:] $N_{\text{prd-n}} = N_{\text{tn}} + N_{\text{fn}}$
+\item [predicted true:] $N_{\text{prd-t}} = N_{\text{tp}} + N_{\text{tn}}$
+\item [predicted false:] $N_{\text{prd-f}} = N_{\text{fp}} + N_{\text{fn}}$
+\item [predicted:] $N_{\text{prd}} = N_{\text{prd-p}} + N_{\text{prd-n}} =
+  N_{\text{prd-t}} + N_{\text{prd-f}}$
+\item [actual:] $N_{\text{act}} = N_{\text{prd}}$
+\end{itemize}
+
+\subsection*{Classify}
+\begin{itemize}
+\item [true positive rate:] $R_{\text{tp}} = N_{\text{tp}} / N_{\text{act-p}}$
+\item [true negative rate:] $R_{\text{tn}} = N_{\text{tn}} /
+  N_{\text{act-n}}$
+\item [accuracy:] $R_{\text{accur}} = N_{\text{prd-t}} / N_{\text{act}}$
+\item [error:] $R_{\text{error}} = N_{\text{prd-f}} / N_{\text{act}} = 1 - R_{\text{accur}}$
+\item [precision:] $R_{\text{precis}} = N_{\text{tp}} / N_{\text{prd-p}}$
+\item [recall:] $R_{\text{recall}} = N_{\text{tp}} / N_{\text{act-p}} = R_{\text{tp}}$
+\item [sensitivity:] $R_{\text{sensit}} = N_{\text{tp}} / N_{\text{act-p}}
+  = R_{\text{tp}} = R_{\text{recall}}$
+\item [specificity:] $R_{\text{specif}} = N_{\text{tn}} / N_{\text{act-n}}
+  = R_{\text{tn}}$
+\item [positive likelihood:] $R_{\text{lkl-pos}} = R_{\text{sensit}} / (1 - R_{\text{specif}})$
+\item [negative likelihood:] $R_{\text{lkl-neg}} = (1 -
+  R_{\text{sensit}}) / R_{\text{specif}}$
+\item [normalized likelihood:] \mbox{}\\%
+  $R_{\text{lkl-norm}} = (\sqrt{3}/\pi)
+  [\log(R_{\text{lkl-pos}}) + \log(R_{\text{lkl-neg}})]$
+\item [Youden's index:] $R_{\text{Youden}} = R_{\text{sensit}} - (1 -
+  R_{\text{specif}})$
+\end{itemize}
+
+\subsection*{Combine}
+\begin{itemize}
+\item [balanced classification:] $R_{\text{bcr}} = (R_{\text{tp}} +
+  R_{\text{tn}})/2 = (R_{\text{sensit}} + R_{\text{specif}}) / 2$
+\item [balanced error:] $R_{\text{ber}} = 1 - R_{\text{bcr}}$
+\item [$F_1$-measure:] $F_1 = 2(R_{\text{precis}} R_{\text{recall}}) / (R_{\text{precis}} + R_{\text{recall}})$
+\item [$F_{\beta}$-measure:] \mbox{}\\ $F_{\beta} = (1+\beta^2) (R_{\text{precis}}
+  R_{\text{recall}}) / (\beta^2R_{\text{precis}} + R_{\text{recall}})$
+\item [Matthew's correlation coefficient:] \mbox{}\\ $C_{\text{Matthews}} =
+  (N_{\text{tp}}N_{\text{tn}} - N_{\text{fp}}N_{\text{fn}}) / %
+  \sqrt{N_{\text{act-p}} N_{\text{prd-p}} N_{\text{act-n}} N_{\text{prd-n}}}$
+\end{itemize}

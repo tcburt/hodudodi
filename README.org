@@ -1,10 +1,8 @@
 * hodudodi
+Learning and teaching are intertwined. This project is for material that I
+have generated for teaching, presenting, and learning.
 
-The project name hodudodi (hoh-doo-DOH-dee) is a contraction of the phrase
-/homines dum docent discunt/ which, according to [[https://books.google.com/books?id=EZJoSq45EPQC&pg=PA39&lpg=PA39&dq=the+Routledge+Dictionary+of+Latin+Quotations+homines+dum+docent+discunt&source=bl&ots=cAn9CGExnf&sig=ACfU3U04wC_NImrEUpOR3NcJ4wQz9stX9A&hl=en&sa=X&ved=2ahUKEwiCkrPpr-DkAhXOct8KHZi3AtIQ6AEwBXoECAoQAQ#v=onepage&q=the%20Routledge%20Dictionary%20of%20Latin%20Quotations%20homines%20dum%20docent%20discunt&f=false][The Routledge Dictionary
-of Latin Quotations: The Illiterati's Guide to Latin Maxims, Mottoes,
-Proverbs, and Sayings]], is a phrase from Seneca meaning "even while they
-teach, men learn".
+Refer to the [[https://github.com/tcburt/hodudodi/wiki][hodudodi project wiki]] for more detailed information.
 
 * Maintenance
 

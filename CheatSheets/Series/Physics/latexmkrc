@@ -4,6 +4,7 @@ ensure_path( 'TEXINPUTS', '../../units//' );
 
 
 $pdflatex = "pdflatex -synctex=1  -halt-on-error %O %S";
+@generated_exts = (@generated_exts, 'synctex.gz');
 
 $pdf_mode = 1;
 $pdf_previewer = 'okular';

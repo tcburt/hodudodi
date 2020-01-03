@@ -1,0 +1,17 @@
+\def\width{10}
+\def\height{0.75}
+
+\coordinate (O) at (0, 0);
+
+\draw [thick, violet] (O) rectangle ++(\width, \height) %
+  node [midway] {Mathematics: linear algebra, calculus, group theory};
+\draw [thick, blue] ($(O)+(0, 1*\height)$) rectangle ++(\width, \height) %
+  node [midway] {Physics};
+\draw [thick, green] ($(O)+(0, 2*\height)$) rectangle ++(\width, \height) %
+  node [midway] {Materials};
+\draw [thick, yellow!80!black] ($(O)+(0, 3*\height)$) rectangle ++(\width, \height) %
+  node [midway] {Electrical Engineering};
+\draw [thick, orange] ($(O)+(0, 4*\height)$) rectangle ++(\width, \height) %
+  node [midway] {Computer Engineering};
+\draw [thick, red] ($(O)+(0, 5*\height)$) rectangle ++(\width, \height) %
+  node [midway] {Computer Software};

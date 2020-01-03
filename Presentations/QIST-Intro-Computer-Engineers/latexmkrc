@@ -1,0 +1,10 @@
+ensure_path( 'TEXINPUTS', './/' );
+
+
+$pdflatex = "pdflatex -synctex=1  -halt-on-error %O %S";
+@generated_exts = (@generated_exts, 'synctex.gz');
+
+$clean_ext = "bbl nav out snm vrb";
+
+$pdf_mode = 1;
+$pdf_previewer = 'okular';

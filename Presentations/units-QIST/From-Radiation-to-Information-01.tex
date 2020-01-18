@@ -1,0 +1,72 @@
+\begin{frame}
+  \frametitle{From Radiation to Information}
+  \vspace*{-1cm}
+  % 1900--1980
+  \setupchronology{%
+    startyear=1900,stopyear=1980,%
+    startdate=false,stopdate=false,%
+    arrow=false,%
+    width=0.9\linewidth%
+  }
+  \setupchronoperiode{dateselevation=-0.75cm}
+  \setupchronoevent{textstyle=\it\footnotesize, textwidth=1.75cm,
+    markdepth=-1cm, date=false}
+  %%\setupchronograduation[event]{markdepth=-2cm}
+  \chronoperiodecoloralternation{red, orange, yellow, green, blue, violet}
+  %
+  \startchronology
+  %%\chronograduation{20}
+  \chronoperiode[startdate=true]{1900}{1920}{}
+  \chronoperiode[startdate=false]{1920}{1940}{}
+  \chronoperiode[startdate=false]{1940}{1960}{}
+  \chronoperiode[startdate=false]{1960}{1980}{}
+  %
+  \chronoevent[textwidth=0.2cm]{1900}{$h$}
+  \chronoevent{1927}{Copenhangen interpretation}
+  \chronoevent{1948}{Classical info theory}
+  \chronoevent{1973}{Holevo bound}
+  \chronoevent[markdepth=0.5cm]{1976}{Quantum info theory}
+  \stopchronology
+
+  \vspace*{-3.0cm}
+  
+  % 1980 --
+  \setupchronology{%
+    startyear=1980,stopyear=2030,%
+    startdate=false,stopdate=false,%
+    arrow=true,%
+    width=0.9\linewidth%
+  }
+  \setupchronoperiode{dateselevation=0.05cm}
+  \setupchronoevent{%
+    textstyle=\it\scriptsize, textwidth=1.75cm, markdepth=0.25cm,
+    date=false
+  }
+  %% \setupchronograduation[event]{markdepth=-2cm}
+  \definecolor{rbGreenBlue}{wave}{500}
+  \definecolor{rbBlueGreen}{wave}{480}
+  \definecolor{rbBlue}{wave}{460}
+  \definecolor{rbBlueViolet}{wave}{440}
+  \definecolor{rbVioletBlue}{wave}{420}
+  \definecolor{rbViolet}{wave}{400}
+  \chronoperiodecoloralternation{rbGreenBlue, rbBlueGreen, rbBlue,
+    rbBlueViolet, rbVioletBlue, rbViolet}
+  %
+  \startchronology
+  %%\chronograduation{20}
+  \chronoperiode[startdate=true]{1980}{1990}{}
+  \chronoperiode[startdate=false]{1990}{2000}{}
+  \chronoperiode[startdate=false]{2000}{2010}{}
+  \chronoperiode[startdate=false]{2010}{2020}{}
+  \chronoperiode[startdate=false]{2020}{2030}{}
+  %
+  \chronoevent[markdepth=-1.25cm]{1980}{QComp desc.}
+  %\chronoevent[markdepth=1.0cm]{1982}{No-cloning}
+  \chronoevent[markdepth=0.15cm]{1984}{BB84 QKD}
+  %\chronoevent[markdepth=-1.25cm]{1985}{Deutsch univ.}
+  \chronoevent[markdepth=1.25cm, textwidth=2.5cm]{1992}{Deutsch-Jozsa alg.}
+  \chronoevent[markdepth=-1.0cm]{1994}{Shor's factoring}
+  \chronoevent[markdepth=0.15cm, textwidth=1.75cm]{1995}{QEC, CNOT}
+  \stopchronology
+
+\end{frame}

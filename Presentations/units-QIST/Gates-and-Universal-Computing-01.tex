@@ -1,0 +1,30 @@
+
+% ----------------------------------------------------------
+\begin{frame}
+  \frametitle{Gates and Universal Computing}
+  Gates are one way to represent actions within a circuit, modifying inputs to output. Some logic gate sets are known to be Turing complete ---  capable of universal computing~\cite{Sheffer, electronic-tutorials}. 
+  \begin{itemize}
+  \item NAND \tikz \draw (0,0) node[scale=0.5, american nand port] (nand)
+    {} (nand.in 1) node [anchor=east] {$a$} (nand.in 2) node [anchor=east]
+    {$b$} (nand.out) node [anchor=west] {$\lnot (a \land b)$};
+  \item NOR \tikz \draw (0,0) node[scale=0.5, american nor port] (nor)
+    {} (nor.in 1) node [anchor=east] {$a$} (nor.in 2) node [anchor=east]
+    {$b$} (nor.out) node [anchor=west] {$\lnot (a \lor b)$};
+  %\item NOR \tikz \node[scale=0.5] [american nor port] {};
+    
+  \item AND with NOT \tikz{ \draw (0,0) node[scale=0.5, american and port]
+      (and) {} (and.in 1) node [anchor=east] {$a$} (and.in 2) node
+      [anchor=east] {$b$} (and.out) node [anchor=west] {$a \land b$} ; \draw
+      (2.5,0) node [scale=0.5, american not port] (not) {} (not.in) node
+      [anchor=east] {$a$} (not.out) node [anchor=west] {$\lnot a$};} 
+  \item OR with NOT \tikz{ \draw (0,0) node[scale=0.5, american or port]
+      (or) {} (or.in 1) node [anchor=east] {$a$}  (or.in 2) node
+        [anchor=east] {$b$}  (or.out) node [anchor=west] {$a \lor b$}; \node at (2.0,0) [scale=0.5] [american not port] {};} 
+  \item AND with OR with NOT \tikz{ \node[scale=0.5] [american and port] {}; \node at (1,0) [scale=0.5] [american or port] {}; \node at (1.75,0) [scale=0.5] [american not port] {};} 
+  %\item Controlled-controlled NOT (Toffoli)
+  %\item $A \land \lnot B$
+  %\item $B \land \lnot A$
+  %\item $A \lor \lnot B$
+  %\item $B \lor \lnot A$
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,54 @@
+%-req-%\usetikzlibrary{shadows}
+
+%-req-%\newcommand{\AxisRotator}[1][rotate=0]{%
+%-req-%    \tikz \draw[x=.5em,y=1.25em,line width=.2ex,-stealth,#1] (0,0) arc (-150:150:1 and 1);%
+%-req-%  }
+
+%-req-%\tikzset{shaded/.style args={#1:#2:#3 @ #4}{
+%-req-%  left color=#1, right color=#3, middle color=#2, shading angle=#4
+%-req-%}}
+%-req-%\tikzset{pics/.cd, clock/.style args={#1:#2:#3}{code={
+%-req-%%\tikzset{x=1ex, y=1ex, every path/.style={line cap=round}} 
+%-req-%\tikzset{x=0.5ex, y=0.5ex, every path/.style={line cap=round}} 
+%-req-%\shade [shaded=black!75:black!50:black!25 @ 225] circle [radius=13];
+%-req-%\shade [shaded=black!75:black!50:black!25 @ 45]  circle [radius=12.5];
+%-req-%\fill [black!90] circle [radius=12];
+%-req-%\foreach \i [evaluate={\j=90-\i*30; \k=mod(\i,3)==0;\m=int(\i*5);}] in {1,...,12}
+%-req-%  \draw [white, line width=\k ? .2ex : .1ex] (\j:11.5) -- (\j:11-\k) 
+%-req-%    (\j:10) node [anchor=\j, text=black!20, font=\tiny\sffamily]  {\expandafter\uppercase\expandafter{\romannumeral\i}};
+%-req-%\shade [inner color=white, outer color=black, opacity=0.25] circle [radius=12];
+%-req-%\fill [gray!50, rotate=90-#1*30-#2/2-#3/120, 
+%-req-%  rounded corners=.25ex, drop shadow={fill=black, opacity=0.5}]
+%-req-%  (-3/2,3/4) -- (-3/2,-3/4) -- (7,0) -- cycle;
+%-req-%\fill  [gray!50, rotate=90-#2*6-#3/60, 
+%-req-%  rounded corners=0.25ex, drop shadow={fill=black, opacity=0.5}]
+%-req-%  (-3/2,3/4) -- (-3/2,-3/4) -- (11,0) -- cycle;
+%-req-%\fill [red!75!black, drop shadow={fill=black, opacity=0.5}, rotate=90-#3*6] (0,-.05ex) rectangle (11,.05ex);
+%-req-%\shade [shaded=black!50:black!25:black!10 @ 225] circle [radius=1];
+%-req-%\shade [shaded=black!50:black!25:black!10 @ 45] circle [radius=3/4];
+%-req-%\fill [white, opacity=1/16] (0:11) arc (0:180:11) 
+%-req-%.. controls ++(-45:10) and ++(135:10) .. cycle;
+%-req-%}}}
+  
+\begin{frame}
+  \frametitle{Planck's Call to Action}
+
+  The difference between classical physics and quantum
+  physics is Planck's constant $\hbar$ (technically, $i\hbar$). %
+  \mbox{}
+  \vfill
+
+  \begin{tikzpicture}
+    \node (hbarapprox) at (-2.0,1.0) {\Huge $\hbar \approx$};    
+    \input{Graphics/coffee-cup-tikz}
+    \draw[->, >=stealth, gray] (0,-0.2) -- ++(0,2);
+    \draw[ultra thick] (0,1.5) node {\AxisRotator[rotate=-90]};
+    \node [right] (rot) at (0.5, 1.5) {rotating a cup a billionth of a turn
+      \ldots};
+    \node[right] (clock) at (2.0,1.0) {\ldots over the lifetime of the
+      universe!};
+    
+    \pic at (5.5,-0.5) {clock={6:36:34}};
+    \node[below] (hbar) at ((5.5,-1.5) {$\hbar \equiv \SI{6.62607015 e-34}{\joule\second}$};
+  \end{tikzpicture}
+\end{frame}

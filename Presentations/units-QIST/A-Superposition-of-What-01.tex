@@ -1,0 +1,83 @@
+
+%-req-%\newcommand{\icol}[1]{% inline column vector
+%-req-%  \left(\begin{smallmatrix}#1\end{smallmatrix}\right)%
+%-req-%}
+%-req-%\newcommand{\irow}[1]{% inline row vector
+%-req-%  \begin{smallmatrix}(#1)\end{smallmatrix}%
+%-req-%}
+
+\begin{frame}
+  \frametitle{A Superposition of What?}
+  \begin{columns}
+    % Abstract
+    \column{0.5\linewidth} In the abstract, a qu\textbf{\uline{b}}it is a complex, linear
+    superposition of two (exclusive and complete) states of a system in a
+    two-dimensional Hilbert space --- \emph{\textbf{not} a vector in three
+      dimensions} 
+    \begin{equation*}
+      \ket{\psi} = \alpha\ket{0} + \beta\ket{1} = \alpha\icol{1\\0} +
+      \beta\icol{0\\1} 
+    \end{equation*}
+
+    
+    \begin{tikzpicture}[scale=0.6, transform shape,
+      line cap=round, line join=round, >=Triangle]
+      \clip(-2.19,-2.49) rectangle (2.66,2.58);
+      \draw [shift={(0,0)}, lightgray, fill, fill opacity=0.1] (0,0) -- (56.7:0.4) arc (56.7:90.:0.4) -- cycle;
+      \draw [shift={(0,0)}, lightgray, fill, fill opacity=0.1] (0,0) -- (-135.7:0.4) arc (-135.7:-33.2:0.4) -- cycle;
+      \draw(0,0) circle (2cm);
+      \draw [rotate around={0.:(0.,0.)},dash pattern=on 3pt off 3pt] (0,0) ellipse (2cm and 0.9cm);
+      \draw (0,0)-- (0.70,1.07);
+      \draw [->] (0,0) -- (0,2);
+      \draw [->] (0,0) -- (-0.81,-0.79);
+      \draw [->] (0,0) -- (2,0);
+      \draw [dotted] (0.7,1)-- (0.7,-0.46);
+      \draw [dotted] (0,0)-- (0.7,-0.46);
+      \draw (-0.08,-0.3) node[anchor=north west] {$\varphi$};
+      \draw (0.01,0.9) node[anchor=north west] {$\theta$};
+      \draw (-1.01,-0.72) node[anchor=north west] {$\mathbf {\hat{x}}$};
+      \draw (2.07,0.3) node[anchor=north west] {$\mathbf {\hat{y}}$};
+      \draw (-0.5,2.6) node[anchor=north west] {$\mathbf {\hat{z}=|0\rangle}$};
+      \draw (-0.4,-2) node[anchor=north west] {$-\mathbf {\hat{z}=|1\rangle}$};
+      \draw (0.4,1.65) node[anchor=north west] {$|\psi\rangle$};
+      \scriptsize
+      \draw [fill] (0,0) circle (1.5pt);
+      \draw [fill] (0.7,1.1) circle (0.5pt);
+    \end{tikzpicture}
+    
+    % Physical
+    \column{0.5\linewidth}
+    \begin{block}{Atomic (spin)}
+      \vspace*{-\baselineskip}
+      \begin{align*}
+        \ket{\psi}_{\text{electron-spin}} &= \alpha\ket{\uparrow}_{\text{el}} +
+                                       \beta\ket{\downarrow}_{\text{el}} %
+        \\ %
+        \ket{\psi}_{\text{nuclear-spin}} &= \alpha\ket{\uparrow}_{\text{nuc}} +
+                                      \beta\ket{\downarrow}_{\text{nuc}} %
+      \end{align*}
+    \end{block}
+    
+    \begin{block}{Photonic (polarization and number)}
+      \vspace*{-\baselineskip}
+      \begin{align*}
+        \ket{\psi}_{\text{photon-pol}} &= \alpha\ket{\nwsearrow}_{\text{ph}} +
+                                       \beta\ket{\neswarrow}_{\text{ph}} %
+        \\ %
+        \ket{\psi}_{\text{photon-num}} &= \alpha\ket{0}_{\text{ph}} +
+                                      \beta\ket{1}_{\text{ph}} %
+      \end{align*}
+    \end{block}
+    
+    \begin{block}{Electronic (charge, current)}
+      \vspace*{-\baselineskip}
+      \begin{align*}
+        \ket{\psi}_{\text{chg}} &= \alpha\ket{0}_{\text{chg}} +
+                                  \beta\ket{2e}_{\text{chg}} %
+        \\ %
+        \ket{\psi}_{\text{curr}} &= \alpha\ket{\circlearrowright}_{\text{curr}} +
+                                   \beta\ket{\circlearrowleft}_{\text{curr}} %
+      \end{align*}
+    \end{block}
+  \end{columns}
+\end{frame}

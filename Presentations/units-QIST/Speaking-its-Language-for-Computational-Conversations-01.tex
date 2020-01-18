@@ -1,0 +1,25 @@
+
+% ----------------------------------------------------------
+\begin{frame}[fragile]
+  \frametitle{Speaking its Language for Computational Conversations}
+  High-level, expressive language is translated to more primitive
+  operations and to \emph{supported} instructions for a given system to
+  carry out and return results.
+  
+  \begin{lstlisting}
+    def simpleFunction(inValOne, inValTwo):
+        # set x and y to the inputs
+        x = copy(inValOne) 
+        y = copy(inValTwo)
+        # perform operation on the inputs (e.g. add)
+        operate(x, y, out=z)
+        # obtain the output of the operation
+        s = measure(z)
+        return s
+
+    # Example script
+    out = simpleFunction(2,2)
+    print('result = {}'.format(out)) # Result = a reproducible value
+  \end{lstlisting}
+  
+\end{frame}

@@ -1,0 +1,83 @@
+
+% ----------------------------------------------------------
+\begin{frame}
+  \frametitle{Quantum Gates and Universal Quantum Computing}
+  $H, S, T,$ and CNOT are a universal set of quantum gates
+  \begin{columns}
+    % Col 1
+    \column[T]{0.45\linewidth}
+    %\begin{itemize}
+    %\item ``quantum circuits subsume classical circuits''~\cite[\S 4.5]{QCQI-Nielsen}
+    %\item 
+    %\end{itemize}
+
+    % Phase (S)
+    \begin{block}{Phase}
+      \begin{quantikz}
+        \lstick{\ket{1}} & \gate{S} & \rstick{$e^{i\pi/2}\ket{1}$} \qw
+      \end{quantikz}
+        \begin{equation*}
+          \begin{pmatrix}
+            1 & 0 \\
+            0 & i
+          \end{pmatrix}
+        \end{equation*}
+    \end{block}
+
+    % $\pi/8$
+    \begin{block}{$T$ (also known as $\pi/8$)}
+      \begin{quantikz}
+        \lstick{\ket{1}} & \gate{T} & \rstick{$e^{i\pi/4}\ket{1}$} \qw
+      \end{quantikz}  
+        \begin{equation*}
+          \begin{pmatrix}
+            1 & 0 \\
+            0 & e^{i\pi/4}
+          \end{pmatrix}
+          = %
+          e^{i\pi/8}
+          \begin{pmatrix}
+            e^{-i\pi/8} & 0 \\
+            0 & e^{i\pi/8}
+          \end{pmatrix}
+        \end{equation*}
+    \end{block}
+
+    % Col 2
+    \column[T]{0.45\linewidth}
+    % Hadamard (H)
+    \begin{block}{Hadamard}
+      \begin{quantikz}
+        \lstick{\ket{0}} & \gate{H} & \rstick{$(\ket{0} + \ket{1})/\sqrt{2}$} \qw
+      \end{quantikz}   
+        \begin{equation*}
+          \begin{pmatrix}
+            1 & 1 \\
+            1 & -1
+          \end{pmatrix}
+        \end{equation*}
+    \end{block}
+
+    % Controlled not 
+    \begin{block}{CNOT (two-qubit gate)}
+      \begin{tiny}
+        \begin{quantikz}
+          \lstick{$\ket{c}$} & \ctrl{1} & \rstick{$\ket{c}$} \qw \\ %
+          \lstick{$\ket{t}$} & \targ{} & \rstick{$\ket{c}\ket{t\oplus c}$}\qw
+        \end{quantikz}
+      \end{tiny}
+      \begin{Tiny}
+        \begin{equation*}
+          \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 0 & 1 \\
+            0 & 0 & 1 & 0 \\
+          \end{pmatrix}
+        \end{equation*}
+      \end{Tiny}
+      \vspace*{-\baselineskip}
+    \end{block}
+
+  \end{columns}
+\end{frame}

@@ -1,21 +1,29 @@
-\begin{frame}
-  \frametitle{A Classical Computing Stack}
-
-  \begin{columns}
-    \column[T]{0.65\linewidth}
-    \includegraphics[width=0.95\linewidth]{%
-      Graphics/Abstract-Classical-Computing-Stack.jpg}
-    
-    Image from StackExchange \url{https://electronics.stackexchange.com/q/353915}
-
+% ----------------------------------------------------------
+\begin{frame}[fragile]
+  \frametitle{A Foreign Language to Quantum Mother Nature}
+  Basic quantum mechanics does not allow common, classical behavior such as
+  copying and deterministic measurement.
+  \begin{itemize}
+  \item No-cloning theorem: Cannot copy an unknown state!
+  \item Measurment postulate: Random selection of eigenstates!
+  \end{itemize}
   
-    \column[T]{0.35\linewidth}
-    \begin{block}{Outside-in}
-      \begin{enumerate}
-      \item Applications
-      \item Physical foundations
-      \item Building between the extremes
-      \end{enumerate}
-    \end{block}
-  \end{columns}
+  \begin{lstlisting}
+    def simpleFunction(inValOne, inValTwo):
+        # set x and y to the inputs
+        # ==========> NO-CLONING THEOREM
+        x = |copy|(inValOne) 
+        y = |copy|(inValTwo)
+        # perform operation on the inputs (e.g. add)
+        operate(x, y, out=z)
+        # obtain the output of the operation
+        # ==========> MEASUREMENT POSTULATE
+        s = +measure+(z)
+        return s
+
+    # Example script
+    out = simpleFunction(2,2)
+    print('result = {}'.format(out)) # Result = ??? 
+  \end{lstlisting}
+  
 \end{frame}
